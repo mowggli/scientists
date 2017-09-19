@@ -1,0 +1,31 @@
+<% include header %>
+<body>
+    <h1><%= topicHead %></h1>
+    <form name="form1" method="POST" action="/scientist/add">
+    <table>
+        <tr>
+        <td>First name</td>
+        <td><input type="text" name="fname" ></td>
+        </tr>
+        <tr>
+        <td>Last name</td>
+        <td><input type="text" name="lname" ></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="submit" value="Save" ></td>
+        </tr>
+    </table>
+    </form>
+    <% if(errors){ %>
+        <ul>
+        <% errors.forEach(function(err){ %>
+            <li> <%= err.msg %> </li>
+        <% }) %>
+        </ul>
+    <%}else{%>
+      <% if(blip!=null){ %>
+          <div> Data Entered as <%= blip.first %>  <%= blip.last %> </div>
+      <%}%>
+    <%}%>
+</body>
+<% include footer %>

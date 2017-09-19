@@ -1,0 +1,11 @@
+<% include header %>
+<body>
+    <h1><%= topicHead %></h1>
+    <ul>
+    <% anarray.forEach(function(p){ %>
+        <li> <%= p.fname %>  <%= p.lname %> </li>
+    <% }) %>
+
+    </ul>
+</body>
+<% include footer %>

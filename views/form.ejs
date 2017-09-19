@@ -1,0 +1,51 @@
+<table>
+    <tr>
+    <td>First name</td>
+    <td><input type="text" name="name.first"></td>
+    </tr>
+    <tr>
+    <td>Last name</td>
+    <td><input type="text" name="name.last" ></td>
+    </tr>
+    <tr>
+    <td>Discipline</td>
+    <td><input type="text" name="discipline" ></td>
+    </tr>
+    <tr>
+    <td>Century</td>
+    <td><input type="number" name="century" ></td>
+    </tr>
+    <tr>
+    <td>Century</td>
+    <td><select type="Number" name="centuryBIS" >
+          <option value=undefined>Any</option>
+          <option value=0>Antiquity</option>
+          <option value=800>Before end of western roman empire</option>
+          <option value=1500>Middle ages</option>
+          <option value=1600>16th century</option>
+          <option value=1700>17th century</option>
+          <option value=1800>18th century</option>
+          <option value=1900>19th century</option>
+          <option value=2000>20th century</option>
+          <option value=2100>21st century</option>
+        </select>
+    </tr>
+    <tr>
+    <td>Alive</td>
+    <td> <select type="Boolean" name="livingBIS" >
+          <option value=undefined>dead or alive</option>
+          <option value=true>still alive</option>
+          <option value=false>dead</option>
+        </select>
+    </td>
+    </tr>
+    <tr>
+    <td>Alive</td>
+    <td>
+    <input type="radio" name="living" value=false checked> Dead<br>
+      <input type="radio" name="living" value=true> Alive<br>
+      <input type="radio" name="living" value=undefined checked> Dead or Alive<br><br>
+    <tr>
+    <td colspan="2"><input type="submit" value="Submit" ></td>
+    </tr>
+</table>

@@ -1,0 +1,50 @@
+<% include header %>
+<body>
+    <h1><%= topicHead %></h1>
+    <% if(blip!=null && blip.length>0){ %>
+      <table border='0'>
+		<colgroup>
+		<col span '1' style='background-color:#ffcc66'> 	<!--name-->
+		<col style='background-color:#ff6666' width='5'> <!--alive-->
+		<col style='background-color:#ff66aa' > <!--dates-->
+		<col style='background-color:#ff66ff' width='5'> <!--age-->
+		<col style='background-color:#dc66ff'> <!--discipline-->
+		<col style='background-color:#9c66ff' width='500' > <!--known for-->
+		<col style='background-color:white' width='1'> <!--edit-->
+		<col style='background-color:white' width='1'> <!--delete-->
+    <col style='background-color:#7d66ff' width='1'>
+		<col style='background-color:#6687ff' width='1'>
+		<col style='background-color:#66b6ff' width='5'>
+		<col style='background-color:#66f6ff' width='1'>
+		<col style='background-color:#66ffb1' width='1'>
+		<col style='background-color:#66ff88' width='1'>
+		<col style='background-color:#66ff66' width='1'>
+		<col style='background-color:#a4ff66'>
+		<col style='background-color:#d2ff66'>
+		<col style='background-color:#f8ff66'>
+		<col style='background-color:#ffe166'>
+		<col style='background-color:#ffbb66'>
+		<col style='background-color:#ff9266'>
+		<col style='background-color:#ff7366'>
+		</colgroup>
+         <tr>
+            <th>Name</th><th>Alive</th><th>dates</th><th>Age at death or now</th><th>Discipline</th><th>Known for</th><th></th><th></th>
+         </tr>
+         <% for (var i = 0; i < blip.length; i++) { %>
+          <tr>
+            <td><%= blip[i].fullName %></td>
+            <td><% if(blip[i].alive){ %> alive <%}else{%> dead <%}%></td>
+            <td><%= blip[i].dates.birth%> --  <%= blip[i].dates.death %></td>
+            <td><%= blip[i].age %></td>
+            <td><%= blip[i].discipline %></td>
+            <td><%= blip[i].knownFor %></td>
+            <td><a href=""><img border="0" src="/static/edit.png" width="57" height="57"></a></td>
+            <td><a href=""><img border="0" src="/static/delete.png" width="50" height="50"></a></td>
+          </tr>
+         <% } %>
+      </table>
+    <%}else{%>
+      <div> No matches.</div>
+    <%}%>
+</body>
+<% include footer %>
